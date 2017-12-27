@@ -1,0 +1,125 @@
+<!--
+ Copyright (c) 2014, 2017, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<div class="oj-hybrid-applayout-page">
+  <div class="oj-applayout-fixed-top">
+      <div class="oj-row headClass">
+          <div class="oj-sm-2 oj-md-2 oj-flex-bar-start">
+              <oj-button style="margin-top: 15%;" id="drawerToggleButton" on-click="[[backBtn]]" chroming="half" display="icons">
+                  <span slot="startIcon" class="oj-fwk-icon oj-fwk-icon-back headIcon"></span>
+                  <span>Navigation Drawer</span>
+                </oj-button>
+          </div>
+          <div class="oj-sm-8 oj-md-8">
+              <h1 class="logoHeader"><img src="css/images/logo.png" class="logo" /></h1>
+          </div>
+          <div class="oj-sm-2 oj-md-2">
+              <img  id="notificaton"  src="css/images/notification-icon.png" class="notificaton" style="margin-top: 25%;"/>
+          </div>
+      </div>
+  </div>
+  <!-- This is where your main page content will be loaded -->
+  <div class="oj-applayout-content">
+    <div role="main" class="oj-hybrid-applayout-content" style="visibility: visible!important;">
+      <div class="demo-flex-zero" style="margin-top: 14%;height:40px;display:block;text-align:center;background-color: #232f3e;
+        color: #ffffff;font-family:roboto;font-size:1.16em">
+        <label style="padding-top: 10px;
+          display: inline-block;">Services on Arrival</label>
+      </div>
+      <div class="oj-row" style="display: -webkit-box;">
+        <div class="oj-sm-6 oj-md-6 oj-col">
+          <div class="div1Sub1">
+            <img class="serviceImg" alt="profile image" src="css/images/beer.jpg">
+            <div class="demo-flex-zero">
+              <span style="color:#e3a81c;font-size:1.2em;">Beer</span>
+            </div>
+            <div class="demo-flex-zero">
+              <span id="totalSelected"></span>
+            </div>
+            <div class="demo-flex-zero " style="display: -webkit-box;">
+              <div class="oj-sm-10 oj-md-10 oj-col ">
+                <span style="font-weight: bold;" id="totalAmount1"></span>
+              </div>
+              <div class="oj-sm-2 oj-md-2 oj-col ">
+                <span>
+                  <img id="totalSelectedImg" style="width:16px;" alt="profile image" src="css/images/select.png">
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="oj-sm-6 oj-md-6 oj-col ">
+          <div class="div1Sub1">
+            <img style="max-height:100%;max-width:100%" alt="profile image" src="css/images/wine.jpg">
+            <div class="demo-flex-zero">
+              <span style="color:#e3a81c;font-size:1.2em;">Wine</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div class="oj-row" style="display: -webkit-box;">
+      <div class="oj-sm-6 oj-md-6 oj-col">
+        <div class="div1Sub1">
+          <img alt="profile image" src="css/images/water.jpg">
+          <div class="demo-flex-zero">
+            <span style="color:#e3a81c;font-size:1.2em;">Mineral Water</span>
+          </div>
+
+        </div>
+      </div>
+      <div class="oj-sm-6 oj-md-6 oj-col ">
+        <div class="div1Sub1">
+          <img style="max-height:100%;max-width:100%" alt="profile image" src="css/images/food.jpg">
+          <div class="demo-flex-zero">
+            <span style="color:#e3a81c;font-size:1.2em;">Food</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!--2nd div-->
+
+  <!--2nd div-->
+  <div class="oj-row" style="display: -webkit-box;">
+    <div class="oj-sm-6 oj-md-6 oj-col">
+      <div class="div1Sub1">
+        <img alt="profile image" src="css/images/complementary.jpg">
+        <div class="demo-flex-zero">
+          <span style="color:#e3a81c;font-size:1.2em;">Complementary</span>
+        </div>
+
+      </div>
+    </div>
+    <div class="oj-sm-6 oj-md-6 oj-col ">
+      <div class="div1Sub1">
+        <img id="otherServices" style="max-height:100%;max-width:100%" alt="profile image" src="css/images/other-request.jpg">
+        <div class="demo-flex-zero">
+          <span style="color:#e3a81c;font-size:1.2em;">Other Request</span>
+        </div>
+        <div class="demo-flex-zero">
+            <span id="totalSelected"></span>
+          </div>
+          <div class="demo-flex-zero " style="display: -webkit-box;">
+            <div class="oj-sm-10 oj-md-10 oj-col ">
+              
+            </div>
+            <div class="oj-sm-2 oj-md-2 oj-col ">
+              <span>
+                <img id="otherRequestImg" style="width:16px;" alt="profile image" src="css/images/select.png">
+              </span>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+<div class="oj-row div3Row5" style="margin-top: 25px;Font-size: 0.6em!important;" id="next" on-click="[[clickListener]]">
+  <oj-button class="checkInBtn" id='nextBtn' on-click='[[nextBtn]]'>COMPLETE CHECK IN</oj-button>
+  <span class="checkInBtn" id="wait" style="display:none">Please wait...</span>
+</div>
+
+</div>
+</div>
+</div>

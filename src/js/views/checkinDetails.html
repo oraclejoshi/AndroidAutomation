@@ -1,0 +1,196 @@
+<!--
+ Copyright (c) 2014, 2017, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<div class="oj-hybrid-applayout-page chkinDtls">
+  <div class="oj-applayout-fixed-top">
+    <!--
+       ** Oracle JET V4.1.0 hybrid mobile application header pattern.
+       ** Please see the Oracle JET Cookbook App Shell: Hybrid Mobile demos for
+       ** more information on how to use this pattern.
+    -->
+    <div class="oj-row headClass">
+        <div class="oj-sm-2 oj-md-2 oj-flex-bar-start">
+            <oj-button style="margin-top: 15%;" id="drawerToggleButton" on-click="[[backBtn]]" chroming="half" display="icons">
+                <span slot="startIcon" class="oj-fwk-icon oj-fwk-icon-back headIcon"></span>
+                <span>Navigation Drawer</span>
+              </oj-button>
+        </div>
+        <div class="oj-sm-8 oj-md-8">
+            <h1 class="logoHeader"><img src="css/images/logo.png" class="logo" /></h1>
+        </div>
+        <div class="oj-sm-2 oj-md-2">
+            <img  id="notificaton"  src="css/images/notification-icon.png" class="notificaton" style="margin-top: 25%;"/>
+        </div>
+    </div>
+  </div>
+  
+  <!-- This is where your main page content will be loaded -->
+  <div class="oj-applayout-content">
+    <div role="main" class="oj-hybrid-applayout-content" style="visibility: visible!important;">
+      <div class="oj-sm-flex-1 checkinDetials-container">
+        <div class="oj-flex oj-hybrid-padding-bottom" style="min-height: 60px;margin-top:14%;padding-top:3%">
+          <div class="oj-sm-8 oj-md-8 oj-lg-8 oj-xl-8" style="padding-top:3%">
+            <span style="color: white;padding-left:5%;" id="active_booking_number"></span>
+          </div>
+          <div class="oj-sm-4 oj-md-4 oj-lg-4 oj-xl-4" style="display: -webkit-box;">
+            <div class="oj-sm-6 oj-md-6 oj-lg-6 oj-xl-6">
+              <a id="hotel_contact_no">
+                  <img alt="call image" src="css/images/phone-icon.png" style="width:32px;height:32px;">
+              </a>
+              
+            </div>
+            <div class="oj-sm-6 oj-md-6 oj-lg-6 oj-xl-6">
+                <a href="https://facebook.com">
+                <img alt="call image" src="css/images/share-icon.png" style="width:32px;height:32px;">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="oj-flex oj-hybrid-padding-bottom" style="min-height: 60px;color:#ffffff;padding-top:1%">
+          <div class="oj-sm-8 oj-md-8 oj-lg-8 oj-xl-8" style="display: -webkit-box;">
+            <label style="padding-left:5%;font-size: 1.25em;display: inline-block;" id="hotel_name"></label>
+          </div>
+          <div class="oj-sm-4 oj-md-4 oj-lg-4 oj-xl-4" style="display: -webkit-box;">
+            <img alt="call image" src="css/images/map-icon.png" style="width:24px;height:24px;">
+          </div>
+        </div>
+        <div class="oj-flex oj-hybrid-padding-bottom" style="min-height: 60px;color:#ffffff;">
+          <div class="oj-row div3Row3">
+            <div class="oj-sm-3 oj-md-3 oj-col" style="padding-left: 3%;">
+
+              <div class="oj-row dateChkDtls">
+                <div class="oj-sm-6 oj-md-6 oj-col">
+                  <span id="dateCheckIN"></span>
+                </div>
+                <div class="oj-sm-6 oj-md-6 oj-col" style="padding-left: 7%;">
+                  <p class="dateMonth week" id="dayCheckIN">SUN</p>
+                  <p class="dateMonth" id="monthCheckIN">NOV</p>
+                </div>
+              </div>
+            </div>
+            <div class="oj-sm-2 oj-md-2 oj-col" style="width: 1px;margin-left: 2%;background-color: #ddd;">
+            </div>
+            <div class="oj-sm-3 oj-md-3 oj-col dateInfo">
+
+              <div class="oj-row dateChkDtls">
+                <div class="oj-sm-6 oj-md-6 oj-col">
+                  <span id="dateCheckOUT">24</span>
+                </div>
+                <div class="oj-sm-6 oj-md-6 oj-col" style="padding-left: 7%; ">
+                  <p class="dateMonth week" id="dayCheckOUT">SUN</p>
+                  <p class="dateMonth" id="monthCheckOUT">NOV</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="oj-flex " style="min-height: 60px;color:#ffffff;">
+          <div class="oj-sm-6 oj-md-6 oj-col">
+            <label style="padding-left:8%;font-size: 1.0em;display: inline-block;" 
+            id="stay_duration"> 3 nights</label>
+          </div>
+          <div class="oj-sm-3 oj-md-3 oj-col">
+            <img alt="profile image" src="css/images/update-arrow.png"> Update
+          </div>
+          <div class="oj-sm-3 oj-md-3 oj-col">
+            <div class="oj-flex ">
+              <div class="oj-sm-4 oj-md-4 oj-col">
+                <img alt="profile image" style="height:28px;width:28px" src="css/images/partly-cloudy-icon.png">
+              </div>
+              <div class="oj-sm-8 oj-md-8 oj-col">
+                <h id="min">53</h>&#8451 / <h id="max">32</h>&#8451
+              </div>
+            </div>
+            <div class="oj-flex" id="type">Partly Clodly</div>
+
+          </div>
+
+        </div>
+      </div>
+      <div class="demo-flex-zero">
+        <h1 class="oj-text-sm" style="padding-top: 5%;
+        padding-left: 5%;
+        padding-bottom: 5%;font-family:roboto;font-size:1.16em;margin-top:0;background-color:#dfe5e7;color:#000000">Booking Details</h1>
+
+
+      </div>
+      <div class="demo-flex-zero" style="background-color:#ffffff">
+        <div class="demo-flex-zero" style=" display: -webkit-box;padding-bottom:0%;">
+          <div class="oj-sm-4 oj-md-4 oj-col" style="padding-left:2%;">
+            <img alt="profile image" style="height:120px;width:120px" src="css/images/Room-type-image.jpg">
+          </div>
+          <div class="oj-sm-8 oj-md-8 oj-col" style="padding-left: 2%;">
+            <div class="demo-flex-zero" style="display: -webkit-box;">
+              <div class="oj-sm-6 oj-md-6 oj-col">
+                <span style="color: #000000;font-family: roboto;font-size: 1.2em;">Room Type</span>
+              </div>
+              <div id="upgrade" class="oj-sm-6 oj-md-6 oj-col" style="background-color: #e3a81c;color: #ffffff;text-align: center;width: 70px;margin-left: 5%;border-radius: 4px;">
+                <span>Upgrade</span>
+              </div>
+            </div>
+            <div class="demo-flex-zero">
+              <span style="color: #767676;font-family: roboto;font-size: 1.0em;" id="room_type">One Beedroom Villa</span>
+            </div>
+            <div class="demo-flex-zero" style="color: #767676;font-family: roboto;font-size: 1.0em;padding-top: 10%;">
+              <p style="margin-bottom: 0;" id="room_decsription">Kitchenette</p>
+              <p style="margin-bottom: 0;" id="room_decsription">Sleep up to 4 Guests</p>
+              <p id="room_bed">1 king Bed &amp; 1 Sleeper Sofa</p>
+            </div>
+          </div>
+        </div>
+        <div class="demo-flex-zero" style=" display: -webkit-box;">
+          <div class="oj-sm-4 oj-md-4 oj-col"></div>
+          <div class="oj-sm-8 oj-md-8 oj-col" style="padding-bottom: 2%;padding-left: 4%;">
+            <a id="roomDetails">View more details</a>
+          </div>
+        </div>
+        <div class="demo-flex-zero" style="height: 2px;background-color: #dcdcdc;padding-top: 0%;"></div>
+        <div class="demo-flex-zero" style="color: #767676;font-family: roboto;font-size: 1.0em;padding-top: 2%;padding-left:2%;">
+            <p>Guest :
+                <span id="spnGuests"></span>
+              </p>
+              <p>Stay Duration :
+                <span id="spnStay"></span>
+              </p>
+              <p>Room Tariff :
+                <span id="spnPrice"></span></p>
+              <p>Check-in time :
+                <span id="spnCheckInTime"></span>
+              </p>
+              <p>Check-out time :
+                <span id="spnCheckOutTime"></span>
+              </p>
+        </div>
+        <div class="oj-row div3Row5" id="next" on-click="[[clickListener]]">
+            <oj-button class="checkInBtn" id='nextBtn' on-click='[[nextBtn]]'>Next</oj-button>
+          </div>
+
+           <!-- The Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content" style="height: 20% !important">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <span>Message</span>
+    </div>
+    <div class="modal-body">
+      <p>Upgrade not available at this time</p>
+      
+    </div>
+    <div class="modal-footer" id="ok">
+     <span >Ok</span>
+    </div>
+  </div>
+
+</div>
+<!-- The Modal -->
+
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+</div>

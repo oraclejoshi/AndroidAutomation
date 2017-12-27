@@ -1,0 +1,210 @@
+<!--
+ Copyright (c) 2014, 2017, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<div class="oj-hybrid-applayout-page">
+    <div class="oj-applayout-fixed-top">
+        <!--
+       ** Oracle JET V4.1.0 hybrid mobile application header pattern.
+       ** Please see the Oracle JET Cookbook App Shell: Hybrid Mobile demos for
+       ** more information on how to use this pattern.
+    -->
+    <div class="oj-row headClass">
+            <div class="oj-sm-2 oj-md-2 oj-flex-bar-start">
+                <oj-button style="margin-top: 15%;" id="drawerToggleButton" on-click="[[backBtn]]" chroming="half" display="icons">
+                    <span slot="startIcon" class="oj-fwk-icon oj-fwk-icon-back headIcon"></span>
+                    <span>Navigation Drawer</span>
+                  </oj-button>
+            </div>
+            <div class="oj-sm-8 oj-md-8">
+                <h1 class="logoHeader"><img src="css/images/logo.png" class="logo" /></h1>
+            </div>
+            <div class="oj-sm-2 oj-md-2">
+                <img  id="notificaton"  src="css/images/notification-icon.png" class="notificaton" style="margin-top: 25%;"/>
+            </div>
+        </div>
+    </div>
+    <!-- This is where your main page content will be loaded -->
+    <div class="oj-applayout-content">
+        <div role="main" class="oj-hybrid-applayout-content" style="visibility: visible!important;">
+            <div class="demo-flex-zero" style="margin-top: 14%;height:40px;display:block;text-align:center;background-color: #232f3e;
+      color: #ffffff;font-family:roboto;font-size:1.16em;">
+                <label style="padding-top: 10px;
+        display: inline-block;">Tower 5 - 4th Floor - Rooms Available</label>
+            </div>
+            <div class="demo-flex-zero" style="display:-webkit-box;height:40px;font-family:roboto;font-size:0.6em">
+                <div class="oj-sm-2 oj-md-2 oj-col"></div>
+                <div class="oj-sm-3 oj-md-3 oj-col" style="display: -webkit-box;">
+                    <div class="oj-sm-6 oj-md-6 oj-col" style="width: 15px; height: 15px;border-radius: 3px;background-color: #bbe6bb;margin-top: 10px;"></div>
+                    <div class="oj-sm-6 oj-md-6 oj-col" style="padding-top: 10px;padding-left: 6px;">
+                        <span>Available</span>
+                    </div>
+                </div>
+                <div class="oj-sm-3 oj-md-3 oj-col" style="display: -webkit-box;">
+                    <div class="oj-sm-6 oj-md-6 oj-col" style="width: 15px; height: 15px;border-radius: 3px;background-color: #cecece;margin-top: 10px;"></div>
+                    <div class="oj-sm-6 oj-md-6 oj-col" style="padding-top: 10px;padding-left: 6px;">
+                        <span>Not Available</span>
+                    </div>
+                </div>
+                <div class="oj-sm-3 oj-md-3 oj-col" style="display: -webkit-box;">
+                        <div class="oj-sm-6 oj-md-6 oj-col" style="width: 15px; height: 15px;border-radius: 3px;background-color: #4cda4c;margin-top: 10px;"></div>
+                        <div class="oj-sm-6 oj-md-6 oj-col" style="padding-top: 10px;padding-left: 6px;">
+                            <span>Selected</span>
+                        </div>
+                </div>
+                <div class="oj-sm-2 oj-md-2 oj-col"></div>
+            </div>
+            <div class="demo-flex-zero" style="background-color:#767676;height:1px;"></div>
+            <div class="demo-flex-zero roomDiv">
+                <div class="demo-flex-zero" style="display:-webkit-box;height: 60px;">
+                    <div class="oj-sm-1 oj-md-1 oj-col"></div>
+                    <div class="oj-sm-3 oj-md-3 oj-col staircase">
+                            <p style="margin-top: 20px;display: inline-block;;text-align: center;font-size: 0.7em">Staircase</p>
+                    </div>
+                    <div class="oj-sm-1 oj-md-1 oj-col staircaseNarrow"></div>
+                    <div id="room" data-room="405"  data-select="no" class="oj-sm-2 oj-md-2 oj-col bhk1 availbleRoom" style="background-color: #bbe6bb;text-align: center;font-size: 0.7em">
+                            <p style="margin-top: 10px;display: inline-block;">1 Bedroom</p>
+                            <p >Room 405</p>
+                    </div>
+                    <div class="oj-sm-5 oj-md-5 oj-col" ></div>
+                </div>
+                <div class="demo-flex-zero" style="display:-webkit-box;height: 120px;">
+                    <div class="oj-sm-2 oj-md-2 oj-col"></div>
+                    <div class="oj-sm-2 oj-md-2 oj-col bhk2" style="background-color: #cecece;text-align: center;font-size: 0.7em">
+                            <p style="margin-top: 40px;display: inline-block;">2 Bedroom</p>
+                            <p>Room 404</p>
+                    </div>
+                    <div class="oj-sm-1 oj-md-1 oj-col staircaseNarrowDown"></div>
+                    <div class="oj-sm-2 oj-md-2 oj-col bhk1Lower">
+                        <div data-room="406" data-select="no" class="demo-flex-zero bhk1LowerRoom availbleRoom" style="background-color: #bbe6bb;text-align: center;font-size: 0.7em">
+                                <p style="margin-top: 10px;display: inline-block;">1 Bedroom</p>
+                                <p>Room 406</p>
+                        </div>
+                        <div data-room="407" data-select="no" class="demo-flex-zero availbleRoom" style="height: 60px;background-color: #bbe6bb;text-align: center;font-size: 0.7em">
+                                <p style="margin-top: 10px;display: inline-block;">1 Bedroom</p>
+                                <p>Room 407</p>
+                        </div>
+                    </div>
+                    <div class="oj-sm-6 oj-md-6 oj-col"></div>
+                </div>
+                <div class="demo-flex-zero" style="display:-webkit-box;height: 120px;">
+                    <div class="oj-sm-2 oj-md-2 oj-col"></div>
+                    <div class="oj-sm-2 oj-md-2 oj-col bhk2" style="background-color: #cecece;text-align: center;font-size: 0.7em">
+                            <p style="margin-top: 40px;display: inline-block;">2 Bedroom</p>
+                            <p>Room 403</p>
+                    </div>
+                    <div class="oj-sm-1 oj-md-1 oj-col staircaseNarrowDown"> </div>
+                    <div class="oj-sm-2 oj-md-2 oj-col bhk1Lower">
+                        <div data-room="408" data-select="no" class="demo-flex-zero bhk1LowerRoom availbleRoom" style="border-top-width:1px;background-color: #bbe6bb;text-align: center;font-size: 0.7em">
+                                <p style="margin-top: 10px;display: inline-block;">1 Bedroom</p>
+                                <p>Room 408</p>
+                        </div>
+                        <div data-room="409" data-select="no" class="demo-flex-zero availbleRoom" style="height: 60px;background-color: #bbe6bb;text-align: center;font-size: 0.7em">
+                                <p style="margin-top: 10px;display: inline-block;">1 Bedroom</p>
+                                <p>Room 409</p>
+                        </div>
+                    </div>
+                    <div class="oj-sm-6 oj-md-6 oj-col"></div>
+                </div>
+                <div class="demo-flex-zero" style="display:-webkit-box;height: 120px;">
+                    <div class="oj-sm-2 oj-md-2 oj-col"></div>
+                    <div class="oj-sm-2 oj-md-2 oj-col bhk2" style="background-color: #cecece;text-align: center;font-size: 0.7em">
+                            <p style="margin-top: 40px;display: inline-block;">2 Bedroom</p>
+                            <p>Room 402</p>
+                    </div>
+                    <div class="oj-sm-1 oj-md-1 oj-col staircaseLift"> </div>
+                    <div class="oj-sm-2 oj-md-2 oj-col bhk1Lift">
+                        <div class="demo-flex-zero" style="height: 40px;border-top-width: 1px;border-right-width: 0px;border-bottom-width: 0px;border-left-width: 1px;border-style: solid;">
+                            <img alt="profile image" src="css/images/elevator.png" class="elevator">
+                        </div>
+                        <div class="demo-flex-zero" style="height: 20px;border-top-width: 0px;border-right-width: 0px;border-bottom-width: 0px;border-left-width: 0px;border-style: solid;">
+                            
+                        </div>
+                        <div class="demo-flex-zero" style="height: 57px;border-top-width: 1px;border-right-width: 0px;border-bottom-width: 1px;border-left-width: 1px;border-style: solid;">
+                                <p class="rotate" style="margin-top: 20px;text-align: center;font-size: 0.7em;display: inline-block;">Lobby</p>
+                        </div>
+                    </div>
+                    <div class="oj-sm-6 oj-md-6 oj-col" style="display:-webkit-box;">
+                         <div class="oj-sm-3 oj-md-3 oj-col studio" style="background-color: #cecece;text-align: center;font-size: 0.7em">
+                                <p class="rotate" style="margin-top: 40px;display: inline-block;">2 Bedroom</p>
+                                <p>Room 416</p>
+                            </div>
+                        <div class="oj-sm-3 oj-md-3 oj-col studio" style="background-color: #cecece;text-align: center;font-size: 0.7em">
+                                <p class="rotate" style="margin-top: 40px;display: inline-block;">2 Bedroom</p>
+                                <p>Room 417</p>
+                            </div>
+                        <div class="oj-sm-3 oj-md-3 oj-col studio" style="background-color: #cecece;text-align: center;font-size: 0.7em">
+                                <p class="rotate" style="margin-top: 40px;display: inline-block;">2 Bedroom</p>
+                                <p>Room 418</p>
+                            </div>
+                        <div class="oj-sm-3 oj-md-3 oj-col studioSide" style="background-color: #cecece;text-align: center;font-size: 0.7em">
+                                <p class="rotate" style="margin-top: 40px;display: inline-block;">2 Bedroom</p>
+                                <p>Room 419</p>
+                            </div>
+                    </div>
+                </div>
+                <div class="demo-flex-zero" style="display:-webkit-box;height: 150px;">
+                    <div class="oj-sm-3 oj-md-3 oj-col bhk3Side" style="background-color: #cecece;text-align: center;font-size: 0.7em">
+                            <p style="margin-top: 70%;display: inline-block;">3 Bedroom</p>
+                            <p>Room 401</p>
+                    </div>
+                    <div class="oj-sm-9 oj-md-9 oj-col studioRooms">
+                        <div class="demo-flex-zero studioStair"></div>
+                        <div class="demo-flex-zero" style="display:-webkit-box;height:115px;border-width: 2px;border-style: solid;">
+                            <div class="oj-sm-2 oj-md-2 oj-col studioDown1"style="background-color: #cecece;text-align: center;font-size: 0.7em">
+                                    <p class="rotate" style="margin-top: 40px;display: inline-block;">2 Bedroom</p>
+                                    <p>Room 410</p>
+                            </div>
+                            <div class="oj-sm-2 oj-md-2 oj-col studioDown1"style="background-color: #cecece;text-align: center;font-size: 0.7em">
+                                    <p class="rotate" style="margin-top: 40px;display: inline-block;">2 Bedroom</p>
+                                    <p>Room 411</p>
+                        
+                        </div>
+                            <div class="oj-sm-2 oj-md-2 oj-col studioDown1" style="background-color: #cecece;text-align: center;font-size: 0.7em">
+                                    <p class="rotate" style="margin-top: 40px;display: inline-block;">2 Bedroom</p>
+                                    <p>Room 412</p>
+                                </div>
+                            <div class="oj-sm-2 oj-md-2 oj-col studioDown1" style="background-color: #cecece;text-align: center;font-size: 0.7em">
+                                    <p class="rotate" style="margin-top: 40px;display: inline-block;">2 Bedroom</p>
+                                    <p>Room 413</p>
+                        </div>
+                            <div class="oj-sm-2 oj-md-2 oj-col studioDown1"style="background-color: #cecece;text-align: center;font-size: 0.7em">
+                                    <p class="rotate" style="margin-top: 40px;display: inline-block;">2 Bedroom</p>
+                                    <p>Room 414</p>
+                        </div>
+                            <div class="oj-sm-2 oj-md-2 oj-col studioDown1" style="  background-color: #cecece;text-align: center;font-size: 0.7em">
+                                    <p class="rotate" style="margin-top: 40px;display: inline-block;">2 Bedroom</p>
+                                    <p>Room 415</p></div>
+                        </div>
+                    </div>
+                    <div class="oj-sm-1 oj-md-1 oj-col stairLast">
+                            <p class="rotate" style="margin-top: 85px;text-align: center;font-size: 0.7em">Staircase</p>
+                    </div>
+                </div>
+            </div>
+            <div class="oj-row div3Row5" id="next" on-click="[[clickListener]]">
+                    <oj-button class="checkInBtn" id='nextBtn' on-click='[[nextBtn]]'>Next</oj-button>
+            </div>
+             <!-- The Modal -->
+<div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <span>Message</span>
+          </div>
+          <div class="modal-body">
+            <p>Please select a room for check-in</p>
+            
+          </div>
+          <div class="modal-footer" id="ok">
+           <span >Ok</span>
+          </div>
+        </div>
+      
+      </div>
+ <!-- The Modal -->
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,178 @@
+<!--
+ Copyright (c) 2014, 2017, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+ <div class="oj-hybrid-applayout-page dashboard">
+    <div class="oj-applayout-fixed-top">
+      <!--
+         ** Oracle JET V4.1.0 hybrid mobile application header pattern.
+         ** Please see the Oracle JET Cookbook App Shell: Hybrid Mobile demos for
+         ** more information on how to use this pattern.
+      -->
+     
+      <header role="banner" class="oj-hybrid-applayout-header">
+          <div class="oj-row headClass">
+              <div class="oj-sm-2 oj-md-2 oj-flex-bar-start">
+                  <oj-button style="margin-top: 15%;" id="drawerToggleButton" on-click="[[toggleDrawer]]" chroming="half" display="icons">
+                      <span slot="startIcon" class="oj-fwk-icon oj-fwk-icon-hamburger headIcon"></span>
+                      <span>Navigation Drawer</span>
+                    </oj-button>
+              </div>
+              <div class="oj-sm-8 oj-md-8">
+                  <h1 class="logoHeader"><img src="css/images/logo.png" class="logo" /></h1>
+              </div>
+              <div class="oj-sm-2 oj-md-2">
+                  <img id="notificaton" src="css/images/notification-icon.png" class="notificaton" style="margin-top: 25%;"/>
+              </div>
+          </div>
+      </header>
+    </div>
+    <!-- This is where your main page content will be loaded oj-hybrid-padding -->
+    <div class="oj-applayout-content" id="main" style="visibility: visible!important;">
+      <div role="main" class="oj-hybrid-applayout-content">
+        <div class="">
+          <!-- The Modal -->
+<div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span>Please Confirm</span>
+        </div>
+        <div class="modal-body">
+          <p>Are you ready to check out?</p>
+          
+        </div>
+        <div class="modal-footer">
+         <span style="padding-right: 25%;" id="cancel">Cancel</span>
+         <span id="ok">Ok</span>
+        </div>
+      </div>
+    
+    </div>
+          <div class="demo-grid-sizes demo-flex-display" style="background-color:#dedede;">
+            <div class="oj-flex oj-flex-items-pad dashboardDiv1">
+              <div class="oj-flex oj-flex-items-pad">
+                <label class="lblAccount" id="lblMyaacount"></label>
+              </div>
+              
+              <div class="oj-flex oj-flex-items-pad divProfile">
+                <label id="loadingImg" style="margin-left: 40%;">Loading...</label>
+                
+                <img   alt="profile image" class="demo-james-icon imgProfile">
+              </div>
+              <div class="oj-flex oj-flex-items-pad divUserInfo">
+  
+                <h2 class="headerUserName"></h2>
+                <p id="tagMemberRewards"></p>
+  
+              </div>
+            </div>
+            <div class="oj-row dashboardDiv2">
+              <div class="oj-sm-2 oj-md-2 oj-lg-2 oj-xl-2 oj-flex-item">
+                <img alt="profile image" class="offerImg" src="css/images/offer-icon.png">
+              </div>
+              <div class="oj-sm-8 oj-md-8 oj-lg-8 oj-xl-8 oj-flex-item offerText ">
+                  <div><span>Exciting offers only for you!</span></div>
+                 
+              </div>
+              <div class="oj-sm-2 oj-md-2 oj-lg-2 oj-xl-2 oj-flex-item" id="offers">
+                <img alt="profile image" class="nextImg" src="css/images/next.png">
+              </div>
+            </div>
+            <div class="oj-flex oj-flex-items-pad dashboardDiv3">
+              <div class="oj-row div3Row1 ">
+                <div class="oj-sm-9 oj-col ">
+                  <label class="activebookinglbl1">Active Booking
+                    <span id="lblActibeBook"></span>
+                  </label>
+                </div>
+                <div class="oj-sm-3 oj-col">
+                  <img alt="profile image" class="favImg" src="css/images/favorite-icon.png">
+                </div>
+              </div>
+              <div class="oj-row divider"></div>
+              <div class="oj-row" style=" padding-top: 2%; padding-left: 5%;color: #767676;
+              font-weight: normal;
+              font-size: 0.8em;">
+                  <p>Registered Credit Card Details</p>
+                   <p>xxxx xxxx xxxx <span id="credit_card_number"></span></p>
+              </div>
+              <div class="oj-row divider"></div>
+              <div class="oj-row div3Row2">
+  
+                <div class="oj-sm-2 oj-md-2 oj-col dateInfo">
+                  <img alt="profile image" class="timeImg" src="css/images/time-icon.png">
+                </div>
+                <div class="oj-sm-10 oj-md-10 oj-col">
+                  <label class="activebookinglbl2">
+                    Upcoming Stay 
+                  </label>
+  
+                </div>
+  
+              </div>
+             
+  
+              <div class="oj-row div3Row3">
+                <div class="oj-sm-5 oj-md-5 oj-col dateInfo">
+                  <div class="oj-row fromdiv">
+                    <span>From</span>
+                  </div>
+                  <div class="oj-row date">
+                    <div class="oj-sm-6 oj-md-6 oj-col">
+                      <span id="dateCheckIN">24</span>
+                    </div>
+                    <div class="oj-sm-6 oj-md-6 oj-col" style="padding-left: 7%;">
+                        <p id="dateCheckIN" class="dateMonth week">SUN</p>
+                        <p id="monthCheckIN" class="dateMonth">NOV</p>
+                    </div>
+                  </div>
+                  <div class="oj-row">
+                    <span class="checkinLbl" id="spnCheckInTime"></span>
+                  </div>
+                </div>
+                <div class="oj-sm-2 oj-md-2 oj-col dividerVertical">
+                </div>
+                <div class="oj-sm-5 oj-md-5 oj-col dateInfo">
+                  <div class="oj-row fromdiv">
+                    <span>Till</span>
+                  </div>
+                  <div class="oj-row date">
+                    <div class="oj-sm-6 oj-md-6 oj-col">
+                      <span id="dateCheckOUT">24</span>
+                    </div>
+                    <div class="oj-sm-6 oj-md-6 oj-col" style="padding-left: 7%; ">
+                        <p id="dayCheckOUT" class="dateMonth week">SUN</p>
+                        <p id="monthCheckOUT" class="dateMonth">NOV</p>
+                    </div>
+                  </div>
+                  <div class="oj-row">
+                    <span class="checkinLbl" id="spnCheckOutTime"></span>
+                  </div>
+                </div>
+  
+              </div>
+              <div class="oj-row divider"></div>
+              <div class="oj-row div3Row4">
+                <span id="hotel_name">West lakes resort and Spa</span>
+                <p id="hotel_city">Orlando,FL</p>
+              </div>
+             
+              <div class="oj-row div3Row5" id="chekin">
+                <oj-button class="checkInBtn" id='checkInBtn' on-click='[[checkInBtn]]'>Check In</oj-button>
+              </div>
+              <div class="oj-row div3Row5" id="chekout" >
+                <oj-button class="checkOutBtn" id='chekOutBtn' on-click='[[chekout]]'>Check Out</oj-button>
+              </div>
+            </div>
+             <!--<div class="oj-row" style="    margin: -1px 10px 0px;">
+  
+                    <oj-button class="checkInBtn" id='checkInBtn' on-click='[[checkInBtn]]'>Check In</oj-button>
+                  
+            </div>-->
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

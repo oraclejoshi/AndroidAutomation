@@ -1,0 +1,51 @@
+<!--
+ Copyright (c) 2014, 2017, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<div class="oj-hybrid-applayout-page">
+  <div class="oj-applayout-fixed-top">
+    <div class="oj-row headClass">
+      <div class="oj-sm-2 oj-md-2 oj-flex-bar-start">
+        <oj-button style="margin-top: 15%;" id="drawerToggleButton" on-click="[[backBtn]]" chroming="half" display="icons">
+          <span slot="startIcon" class="oj-fwk-icon oj-fwk-icon-back headIcon"></span>
+          <span>Navigation Drawer</span>
+        </oj-button>
+      </div>
+      <div class="oj-sm-8 oj-md-8">
+        <h1 class="logoHeader">
+          <img src="css/images/logo.png" class="logo" />
+        </h1>
+      </div>
+      <div class="oj-sm-2 oj-md-2">
+        <img  id="notificaton"  src="css/images/notification-icon.png" class="notificaton" style="margin-top: 25%;" />
+      </div>
+    </div>
+  </div>
+  <!-- This is where your main page content will be loaded -->
+  <div class="oj-applayout-content">
+    <div role="main" class="oj-hybrid-applayout-content" style="visibility: visible!important;">
+      <div class="demo-grid-sizes" style="margin-top:14%;height: 50px;background-color: #dfdbdb;text-align: center; ">
+        <span style="padding-top: 15px;display: block;">Other Request</span>
+      </div>
+
+      <div class="oj-row serviceBoxParent">
+        <div class="oj-row serviceBox">
+            <p>If you have any special request that you want to avail during your check-in please 
+                let us know in in the box below
+              </p>
+          <div class="serviceBoxChcild">
+           
+              <textarea placeholder="Type your request here" id="txtArea" rows="12" cols="50" style="margin: 0px;width: 100%;height: 100%;border-style: solid;
+              border-color: #cccccc;">
+                   </textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="oj-row div3Row5" style="margin-top: 25px;Font-size: 0.6em!important;" id="next" on-click="[[clickListener]]">
+        <oj-button class="checkInBtn" id='nextBtn' on-click='[[nextBtn]]'>DONE</oj-button>
+      </div>
+
+    </div>
+  </div>
+</div>

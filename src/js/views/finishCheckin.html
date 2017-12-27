@@ -1,0 +1,131 @@
+<!--
+ Copyright (c) 2014, 2017, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<div class="oj-hybrid-applayout-page">
+  <div class="oj-applayout-fixed-top">
+    <div class="oj-row headClass">
+      <div class="oj-sm-2 oj-md-2 oj-flex-bar-start">
+        <div class="oj-sm-2 oj-md-2 oj-flex-bar-start">
+          <oj-button style="margin-top: 15%;" id="drawerToggleButton" on-click="[[toggleDrawer]]" chroming="half" display="icons">
+            <span slot="startIcon" class="oj-fwk-icon oj-fwk-icon-hamburger headIcon"></span>
+            <span>Navigation Drawer</span>
+          </oj-button>
+        </div>
+      </div>
+      <div class="oj-sm-8 oj-md-8">
+        <h1 class="logoHeader">
+          <img src="css/images/logo.png" class="logo" />
+        </h1>
+      </div>
+      <div class="oj-sm-2 oj-md-2">
+        <img  id="notificaton"  src="css/images/notification-icon.png" class="notificaton" style="margin-top: 25%;" />
+      </div>
+    </div>
+  </div>
+  <!-- This is where your main page content will be loaded -->
+  <div class="oj-applayout-content">
+    <div role="main" class="oj-hybrid-applayout-content" style="visibility: visible!important;">
+      <div class="demo-grid-sizes" style="margin-top:14%;height: 50px;background-color: #dfdbdb;text-align: center; ">
+        <span style="padding-top: 15px;display: block;">Check-in Successful!</span>
+      </div>
+      <div class="oj-row checkOutHead">
+        <div class="oj-row checkOutLogo">
+          <!-- <img id="checkOutLogo" src="css/images/check-in-icon.png" style="margin-top: 25%;height: 70px;"> -->
+
+          <img  id="checkOutLogo"  alt="profile image" class="demo-james-icon imgProfile">
+        </div>
+        <!-- <div class="oj-row"> -->
+        <p style="padding-top:3%">Welcome <span id="first_name">Steve</span>!Have a pleasant stay</p>
+      </div>
+
+
+      <div class="demo-grid-sizes checkFirstDiv">
+        <div class="oj-row">
+          <div class="oj-row checkInHeader">
+            <span style="padding-left: 2%;padding-top: 2%;display: inline-block;">Check-in Details</span>
+          </div>
+          <div class="oj-row dtls">
+            <p>Booking id:
+              <span id="active_booking_number">#889898</span>
+            </p>
+            <p>Room No :
+              <span id="selected_room">#889898</span>
+            </p>
+            <p>Room Type :
+              <span id="room_type">#889898</span>
+            </p>
+            <p>Guest :
+              <span id="room_guests">#889898</span>
+            </p>
+            <p>Stay Duration :
+              <span id="stay_duration">#889898</span>
+            </p>
+            <p>Room Tarrif:
+              <span id="room_tariff">#889898</span>
+            </p>
+            <p>Check-in Time :
+              <span id="checkIn">#889898</span>
+            </p>
+            <p>Check-out Time:
+              <span id="checkOut">#889898</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="demo-grid-sizes checkFirstDiv">
+          <div class="oj-row">
+            <div class="oj-row checkInHeader" style=" display: -webkit-box;">
+                <div class="oj-sm-9 oj-md-9">
+                  <span style="padding-left: 2%;padding-top: 2%;display: inline-block;">Request on Arrival</span>
+                </div>
+                <div class="oj-sm-3 oj-md-3" style="position: relative;text-align: center;">
+                  <div id="serviceEdit" style="border-radius: 5px;color:#FFF;background-color: #e3a81c;width: 45px;height: 20px; margin-top: 4%; position: absolute;">Edit</div>
+                </div>
+            </div>
+            <div class="oj-row dtls chekOutRow">
+                <div class="oj-sm-7 oj-md-7">
+                   <span>Beer : <span id="beerQnty"></span> Bottle</span>
+                </div>
+                <div class="oj-sm-5 oj-md-5" style="padding-bottom:2%">
+                    <span id="beerAmount">$11.50</span>
+                </div>
+            </div>
+            <!-- <div class="oj-row dtls chekOutRow">
+                <div class="oj-sm-7 oj-md-7">
+                   <span>Wine 1 Bottle</span>
+                </div>
+                <div class="oj-sm-5 oj-md-5" style="padding-bottom:2%">
+                    <span>$135</span>
+                </div>
+            </div> -->
+          </div>
+        </div>
+
+        <div class="demo-grid-sizes checkFirstDiv">
+            <div class="oj-row">
+                <div class="oj-row checkInHeader" style=" display: -webkit-box;">
+                    <div class="oj-sm-9 oj-md-9">
+                      <span  style="padding-left: 2%;padding-top: 2%;display: inline-block;">Other Request</span>
+                    </div>
+                    <div class="oj-sm-3 oj-md-3" style="position: relative;text-align: center;">
+                      <div id="otherServices" style="border-radius: 5px;color:#FFF;background-color: #e3a81c;width: 45px;height: 20px; margin-top: 4%; position: absolute;">Edit</div>
+                    </div>
+                </div>
+              <div class="oj-row dtls">
+                <p id="others">Need one wheel chair
+                </p>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="oj-row div3Row5" id="next" on-click="[[clickListener]]">
+              <oj-button class="checkInBtn" id='nextBtn' on-click='[[nextBtn]]'>Done</oj-button>
+      </div>
+
+    </div>
+  </div>
+</div>
